@@ -3,11 +3,9 @@ korišćenje petlji i funkcije sum.
 Primer: suma([[1, 2, 3],[4, 5, 6],[7, 8, 9]]) = 45"""
 
 from functools import reduce
-from itertools import *
 
-def suma(lst) :
-    return lst if type(lst)==int else suma(lst[0]) + suma(lst[1:]) if lst else 0
+def suma(lista) :
+    return reduce(lambda acc, x : acc+x if type(x) == int else acc+suma(x), lista, 0)
 
-lista1=[1,[2,3],[4,5],6]
-print(suma(lista1))
+print(suma(suma([[1, 2, 3],[4, 5, 6],[7, 8, 9]])))
 
