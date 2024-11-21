@@ -6,7 +6,6 @@ pokušaja (smatrati da dvaneastocifreni broj u svom zapisu nikada nema svih 10 c
 
 #heuristika je da nam treba 12 pokusaja (znaci ovde se radi o broju pozicija koje su ostale neotkrivene i nema veze sa time sto nam je jednocifreni broj)
 # , odnosno da imamo sve razlicite cifre, a g je stvaran broj pokusaja
-from collections import deque
 
 def a_star_guess(number):
     # Ciljni broj - pretvaranje u listu
